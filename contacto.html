@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto - Tu Entrenador Personal</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>TuEntrenadorPersonal</h1>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre Mí</a></li>
+        <li><a href="planes.html">Planes</a></li>
+        <li><a href="encuesta.html">Encuesta</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Contáctame</h2>
+    <p>¿Tienes dudas? Escríbeme y responderé lo antes posible.</p>
+
+    <form id="contacto-form" style="background:white; padding:2rem; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); max-width:600px; margin:2rem auto;">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required style="width:100%; padding:0.8rem; margin:0.5rem 0;" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required style="width:100%; padding:0.8rem; margin:0.5rem 0;" />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required style="width:100%; padding:0.8rem; margin:0.5rem 0; height:120px;"></textarea>
+
+      <button type="submit" style="background:#2575fc; color:white; padding:1rem 2rem; border:none; border-radius:5px; cursor:pointer;">Enviar mensaje</button>
+    </form>
+
+    <div style="margin-top:2rem; text-align:center;">
+      <p><strong>Email:</strong> info@tuentrenador.com</p>
+      <p><strong>WhatsApp:</strong> +34 123 456 789</p>
+      <p><strong>Redes:</strong> @tuentrenadorpersonal</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tu Entrenador Personal. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contacto-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Mensaje enviado. Gracias por contactarme, te responderé pronto.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encuesta - Tu Plan Personalizado</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>TuEntrenadorPersonal</h1>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre Mí</a></li>
+        <li><a href="planes.html">Planes</a></li>
+        <li><a href="encuesta.html">Encuesta</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Descubre tu plan ideal</h2>
+    <p>Responde estas preguntas y recibirás un programa de entrenamiento hecho solo para ti.</p>
+
+    <form id="encuesta-form" style="background:white; padding:2rem; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); max-width:800px; margin:2rem auto;">
+      <label for="objetivo">Objetivo principal:</label>
+      <select id="objetivo" name="objetivo" required style="width:100%; padding:0.8rem; margin:0.5rem 0;">
+        <option value="">Selecciona...</option>
+        <option value="bajar">Bajar de peso</option>
+        <option value="ganar">Ganar músculo</option>
+        <option value="tonificar">Tonificar</option>
+        <option value="resistencia">Mejorar resistencia</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="dias">Días disponibles por semana:</label>
+      <select id="dias" name="dias" required style="width:100%; padding:0.8rem; margin:0.5rem 0;">
+        <option value="">Selecciona...</option>
+        <option value="1-2">1-2 días</option>
+        <option value="3">3 días</option>
+        <option value="4-5">4-5 días</option>
+        <option value="6+">6 o más</option>
+      </select>
+
+      <label for="equipo">Equipo disponible:</label>
+      <select id="equipo" name="equipo" required style="width:100%; padding:0.8rem; margin:0.5rem 0;">
+        <option value="">Selecciona...</option>
+        <option value="peso">Solo peso corporal</option>
+        <option value="mancuernas">Mancuernas</option>
+        <option value="bandas">Bandas elásticas</option>
+        <option value="gimnasio">Gimnasio</option>
+      </select>
+
+      <label for="lesiones">¿Tienes lesiones o condiciones médicas? (opcional)</label>
+      <textarea id="lesiones" name="lesiones" placeholder="Explícanos brevemente..." style="width:100%; padding:0.8rem; margin:0.5rem 0; height:80px;"></textarea>
+
+      <label for="nombre">Tu nombre:</label>
+      <input type="text" id="nombre" name="nombre" required style="width:100%; padding:0.8rem; margin:0.5rem 0;" />
+
+      <label for="email">Tu email:</label>
+      <input type="email" id="email" name="email" required style="width:100%; padding:0.8rem; margin:0.5rem 0;" />
+
+      <button type="submit" style="background:#2575fc; color:white; padding:1rem 2rem; border:none; border-radius:5px; cursor:pointer;">Enviar encuesta</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tu Entrenador Personal. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById("encuesta-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("¡Gracias! En 24 horas recibirás tu plan personalizado por email.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
